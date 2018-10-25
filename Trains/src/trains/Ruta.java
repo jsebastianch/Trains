@@ -16,11 +16,14 @@ public class Ruta {
     private Ciudad destino;
     
     private Integer distancia;
+    
+    private Boolean utilizada;
 
     public Ruta(Ciudad origen, Ciudad destino, Integer distancia) {
         this.origen = origen;
         this.destino = destino;
         this.distancia = distancia;
+        this.utilizada = Boolean.FALSE;
     }
 
     public Ciudad getOrigen() {
@@ -46,4 +49,14 @@ public class Ruta {
     public void setDistancia(Integer distancia) {
         this.distancia = distancia;
     }
+
+    public Boolean getUtilizada() {
+        return utilizada;
+    }
+
+    public void setUtilizada(Boolean utilizada) {
+        this.utilizada = utilizada;
+    }
+    
+    
 }

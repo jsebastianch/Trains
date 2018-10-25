@@ -10,9 +10,9 @@ package trains;
  * @author schavez
  */
 public class Ciudad {
-    
-    private String nombre;
 
+    private String nombre;
+    
     public Ciudad(String nombre) {
         this.nombre = nombre;
     }
@@ -25,22 +25,24 @@ public class Ciudad {
         this.nombre = nombre;
     }
 
-	@Override
-	public boolean equals(Object obj) {
-		if(obj == null || !(obj instanceof Ciudad)) {
-			return false;
-		}
-		return this.nombre.equals(((Ciudad) obj).getNombre());
-	}
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || !(obj instanceof Ciudad)) {
+            return false;
+        }
+        return this.nombre.equals(((Ciudad) obj).getNombre());
+    }
 
-	@Override
-	public String toString() {
-		return "Ciudad:"+this.nombre;
-	}
-    
-	@Override
-	public int hashCode() {
-		if(this.nombre == null) return 0;
-		return this.nombre.hashCode();
-	}
+    @Override
+    public String toString() {
+        return "Ciudad:" + this.nombre;
+    }
+
+    @Override
+    public int hashCode() {
+        if (this.nombre == null) {
+            return 0;
+        }
+        return this.nombre.hashCode();
+    }
 }
